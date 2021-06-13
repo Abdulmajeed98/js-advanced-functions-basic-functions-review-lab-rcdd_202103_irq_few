@@ -28,11 +28,11 @@ const Calculator = {
   }
 }
 
-let actionApplyer = function(start, ray) {
+const actionApplyer = function(start, ray) {
   let a = start
 
-  for (let i = 0; i < ray.length; i++ ){
-    a = ray[i](a)
+  for (let i of ray ){
+    a = i(a)
   }
 
   return a
